@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -6,22 +7,17 @@ import { CiTimer } from "react-icons/ci";
 import { GoHome } from "react-icons/go";
 import { TfiStatsUp } from "react-icons/tfi";
 
-const NavLink = ({ href, children, className = "", ...props }) => {
-  const pathname = usePathname();
-  const isActive = pathname === href;
-  const baseClass = isActive
-    ? "btn btn-sm btn-success normal-case px-4 text-white"
-    : "btn btn-ghost btn-sm normal-case px-4";
-  return (
-    <Link href={href} className={`${baseClass} ${className}`} {...props}>
-      {children}
-    </Link>
-  );
-};
-
 const Navbar = () => {
+  const pathname = usePathname();
+
+  const getLinkClass = (href) => {
+    const isActive = pathname === href;
+    return isActive
+      ? "btn btn-sm normal-case px-4 text-white gap-2 bg-emerald-900 border-emerald-900"
+      : "btn btn-ghost btn-sm normal-case px-4 gap-2";
+  };
   return (
-    <header className="bg-base-100 border-b border-base-200 shadow-sm">
+    <header className="bg-base-100 border-b border-base-200 shadow-md z-10">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
           <span className="text-lg font-semibold tracking-tight">
@@ -55,30 +51,37 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
             >
               <li>
-                <NavLink href="/" className="justify-between">
+                <Link href="/" className={getLinkClass("/")}>
                   <GoHome /> Home
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink href="/timeline"><CiTimer />Timeline</NavLink>
+                <Link href="/timeline" className={getLinkClass("/timeline")}>
+                  <CiTimer />
+                  Timeline
+                </Link>
               </li>
               <li>
-                <NavLink href="/stats"><TfiStatsUp /> Stats</NavLink>
+                <Link href="/stats" className={getLinkClass("/stats")}>
+                  <TfiStatsUp /> Stats
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
         <nav className="hidden items-center gap-2 lg:flex">
-          <NavLink href="/" className="gap-2">
+          <Link href="/" className={getLinkClass("/")}>
             <GoHome />
             Home
-          </NavLink>
-          <NavLink href="/timeline">
+          </Link>
+          <Link href="/timeline" className={getLinkClass("/timeline")}>
             <CiTimer />
             Timeline
-          </NavLink>
-          <NavLink href="/stats"><TfiStatsUp /> Stats</NavLink>
+          </Link>
+          <Link href="/stats" className={getLinkClass("/stats")}>
+            <TfiStatsUp /> Stats
+          </Link>
         </nav>
       </div>
     </header>
