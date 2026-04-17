@@ -1,8 +1,8 @@
-import { FaPhone, FaRegCommentDots, FaVideo, FaArrowLeft } from "react-icons/fa";
 import { MdOutlineArchive, MdDeleteOutline, MdOutlineEdit } from "react-icons/md";
 import { IoNotificationsOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
+import QuickCheckInButtons from "@/Components/friend-details/QuickCheckInButtons";
 
 const getFriendById = async (id) => {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -107,20 +107,7 @@ export default async function FriendDetails({ params }) {
 
           <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
             <h3 className="text-lg font-bold text-slate-800 mb-6">Quick Check-In</h3>
-            <div className="grid grid-cols-3 gap-4">
-              <button className="flex flex-col items-center py-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-300 transition-all">
-                <FaPhone className="text-slate-700 text-xl mb-2" />
-                <span className="text-sm font-bold text-slate-700">Call</span>
-              </button>
-              <button className="flex flex-col items-center py-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-300 transition-all">
-                <FaRegCommentDots className="text-slate-700 text-xl mb-2" />
-                <span className="text-sm font-bold text-slate-700">Text</span>
-              </button>
-              <button className="flex flex-col items-center py-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-300 transition-all">
-                <FaVideo className="text-slate-700 text-xl mb-2" />
-                <span className="text-sm font-bold text-slate-700">Video</span>
-              </button>
-            </div>
+            <QuickCheckInButtons friendName={friend.name} />
           </div>
         </div>
       </div>
