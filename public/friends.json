@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "https://i.pravatar.cc/150?u=1",
+    "email": "john.doe@example.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university. Love hiking together.",
+    "goal": 14,
+    "next_due_date": "2024-03-20"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Jenkins",
+    "picture": "https://i.pravatar.cc/150?u=2",
+    "email": "s.jenkins@webmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "Former manager at TechCorp. Great resource for career advice.",
+    "goal": 30,
+    "next_due_date": "2024-05-10"
+  },
+  {
+    "id": 3,
+    "name": "Michael Chen",
+    "picture": "https://i.pravatar.cc/150?u=3",
+    "email": "mchen_dev@provider.net",
+    "days_since_contact": 60,
+    "status": "overdue",
+    "tags": ["hobby", "photography"],
+    "bio": "Met at a local photo walk. Owns a vintage Leica collection.",
+    "goal": 45,
+    "next_due_date": "2024-02-15"
+  },
+  {
+    "id": 4,
+    "name": "Elena Rodriguez",
+    "picture": "https://i.pravatar.cc/150?u=4",
+    "email": "elena.rod@lifestyle.com",
+    "days_since_contact": 1,
+    "status": "on-track",
+    "tags": ["family", "sister"],
+    "bio": "Living in Madrid. Need to stay updated on her new business venture.",
+    "goal": 7,
+    "next_due_date": "2024-04-20"
+  },
+  {
+    "id": 5,
+    "name": "David Smith",
+    "picture": "https://i.pravatar.cc/150?u=5",
+    "email": "dsmith88@gmail.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["gym", "acquaintance"],
+    "bio": "Morning workout regular. Discussed starting a weekend cycling group.",
+    "goal": 10,
+    "next_due_date": "2024-04-05"
+  },
+  {
+    "id": 6,
+    "name": "Aisha Khan",
+    "picture": "https://i.pravatar.cc/150?u=6",
+    "email": "aisha.k@nonprofit.org",
+    "days_since_contact": 45,
+    "status": "on-track",
+    "tags": ["volunteer", "professional"],
+    "bio": "Coordinates the community garden project. Very well-connected.",
+    "goal": 90,
+    "next_due_date": "2024-06-01"
+  },
+  {
+    "id": 7,
+    "name": "Robert Taylor",
+    "picture": "https://i.pravatar.cc/150?u=7",
+    "email": "rtaylor@logistics.com",
+    "days_since_contact": 12,
+    "status": "on-track",
+    "tags": ["high school", "old friend"],
+    "bio": "Childhood friend. Recently moved back to the city.",
+    "goal": 21,
+    "next_due_date": "2024-04-28"
+  },
+  {
+    "id": 8,
+    "name": "Linda Wu",
+    "picture": "https://i.pravatar.cc/150?u=8",
+    "email": "linda.wu@design.io",
+    "days_since_contact": 120,
+    "status": "overdue",
+    "tags": ["creative", "freelance"],
+    "bio": "Amazing UI designer. We worked on the 'GreenSpace' project together.",
+    "goal": 60,
+    "next_due_date": "2024-01-10"
+  },
+  {
+    "id": 9,
+    "name": "James Wilson",
+    "picture": "https://i.pravatar.cc/150?u=9",
+    "email": "jwilson@academy.edu",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["neighbor", "chess"],
+    "bio": "Lives in Apartment 4B. Plays chess at the park on Saturdays.",
+    "goal": 14,
+    "next_due_date": "2024-04-25"
+  },
+  {
+    "id": 10,
+    "name": "Chloe Beaumont",
+    "picture": "https://i.pravatar.cc/150?u=10",
+    "email": "chloe.b@fashion.fr",
+    "days_since_contact": 40,
+    "status": "overdue",
+    "tags": ["travel", "friend"],
+    "bio": "Met during a backpacking trip in Thailand. Lives in Paris.",
+    "goal": 30,
+    "next_due_date": "2024-03-30"
+  }
+]

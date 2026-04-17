@@ -1,3 +1,4 @@
+import Friends from "@/Components/home/Friends";
 import HomeHeader from "@/Components/home/HomeHeader";
 import HomeStats from "@/Components/home/HomeStats";
 
@@ -7,6 +8,8 @@ export default function Home() {
       <main className="flex flex-1 w-full max-w-7xl flex-col  py-16 px-4 md:px-12 bg-white dark:bg-black sm:items-start">
         <HomeHeader></HomeHeader>
         <HomeStats></HomeStats>
+        <Friends></Friends>
+        
       </main>
     </div>
   );
