@@ -3,7 +3,9 @@ import Link from "next/link"; // Import the Link component
 
 const Friends = async () => {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/friends.json`);
+  const res = await fetch(`${baseUrl}/friends.json`, {
+    cache: "no-store",
+  });
   const friends = await res.json();
 
   const getStatusColor = (status) => {
