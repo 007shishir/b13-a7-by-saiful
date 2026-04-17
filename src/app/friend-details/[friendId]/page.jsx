@@ -3,29 +3,9 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import QuickCheckInButtons from "@/Components/friend-details/QuickCheckInButtons";
-
-const getFriendById = async (id) => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  
-  try {
-    const res = await fetch(`${baseUrl}/friends.json`, { cache: 'no-store' });
-    if (!res.ok) return null;
-
-    const friends = await res.json();
-    
-    // Use Number() to ensure you aren't comparing a string "1" to a number 1
-    const foundFriend = friends.find((f) => Number(f.id) === Number(id));
-    
-    console.log("Fetched friend:", foundFriend); // This should now show the object
-    return foundFriend;
-  } catch (error) {
-    console.error("Fetch error:", error);
-    return null;
-  }
-};
+import { getFriendById } from "@/lib/friendsData";
 
 export default async function FriendDetails({ params }) {
-  // CRITICAL: In Next.js 15, you MUST await params
   const { friendId } = await params;
   const friend = await getFriendById(friendId);
 
