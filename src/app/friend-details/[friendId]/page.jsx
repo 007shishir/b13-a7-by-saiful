@@ -59,7 +59,7 @@ export default async function FriendDetails({ params }) {
               {friend.status}
             </span>
             <p className="text-slate-400 text-sm italic mt-6 leading-relaxed">
-              "{friend.bio}"
+              {`"${friend.bio}"`}
             </p>
           </div>
 
